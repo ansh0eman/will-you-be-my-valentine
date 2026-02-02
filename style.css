@@ -24,35 +24,17 @@
     object-fit: cover;
 }
 
-.glass {
-    padding: 40px 60px;
-    border-radius: 20px;
-
-    background: rgba(255, 255, 255, 0.12);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-}
 
 .content{
     text-align: center;
     animation: fadeUp 1.2s ease-out forwards;
 }
 
-@keyframes heartbeat {
-    0% { transform: scale(1); }
-    25% { transform: scale(1.08); }
-    40% { transform: scale(1); }
-    60% { transform: scale(1.08); }
-    100% { transform: scale(1); }
-}
 
-.content a:hover {
+.content a:hover{
     background: white;
     color: black;
-    animation: heartbeat 0.9s ease-in-out;
+    transform: translateY(-3px);
 }
 
 .content h1{
@@ -60,14 +42,6 @@
     color: white;
     font-weight: 600;
     transition: all 0.6s ease;
-}
-
-.confetti {
-    position: fixed;
-    width: 8px;
-    height: 8px;
-    pointer-events: none;
-    z-index: 9999;
 }
 
 .content h1:hover {
