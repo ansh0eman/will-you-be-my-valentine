@@ -12,45 +12,12 @@
             <source src="final.mp4"/>
         </video>
         <section class="content">
-    <div class="glass">
         <h1>Will you be my valentine?</h1>
         <a href="https://youtu.be/eRPtjzgZO-E" target="_blank" rel="noopener noreferrer">
             Watch me!!
         </a>
-    </div>
 </section>
     </section>
-    <script>
-function confettiBurst(x, y) {
-    for (let i = 0; i < 30; i++) {
-        const confetti = document.createElement("div");
-        confetti.className = "confetti";
-        confetti.style.left = x + "px";
-        confetti.style.top = y + "px";
-        confetti.style.background = `hsl(${Math.random()*360}, 100%, 60%)`;
-        confetti.style.transform = `rotate(${Math.random()*360}deg)`;
-        document.body.appendChild(confetti);
-
-        const angle = Math.random() * 2 * Math.PI;
-        const distance = Math.random() * 150;
-
-        confetti.animate([
-            { transform: "translate(0,0)", opacity: 1 },
-            { transform: `translate(${Math.cos(angle)*distance}px, ${Math.sin(angle)*distance}px)`, opacity: 0 }
-        ], {
-            duration: 900,
-            easing: "ease-out"
-        });
-
-        setTimeout(() => confetti.remove(), 900);
-    }
-}
-
-document.querySelector(".content a").addEventListener("click", e => {
-    const rect = e.target.getBoundingClientRect();
-    confettiBurst(rect.left + rect.width/2, rect.top);
-});
-</script>
 
 </body>
 </html>
